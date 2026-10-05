@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<title>¡Feliz cumpleaños!</title>
+<link rel="stylesheet" href="estilos1.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+
+<!-- ===== PANTALLA 0: bienvenida (como el video) ===== -->
+<section class="pantalla activa" id="p0">
+  <h1 class="saludo" id="saludo">¡Feliz cumpleaños!</h1>
+  <div class="avatar"><img id="avatar" alt="Foto del cumpleañero"></div>
+  <p class="texto">¡Dale al botón de siguiente!</p>
+  <button class="boton" data-ir="p1">¡Siguiente!! ^w^</button>
+</section>
+
+<!-- ===== PANTALLA 1: pastel ===== -->
+<section class="pantalla" id="p1">
+  <p class="intro">Hoy es un día especial...</p>
+
+  <div class="titulo" aria-live="polite">
+    <div class="linea1" id="linea1"></div>
+    <div class="nombre" id="nombre"></div>
+  </div>
+
+  <svg class="pastel" id="pastel" viewBox="0 0 300 290" role="button" tabindex="0" aria-label="Pastel de cumpleaños: tócalo para soplar las velas">
+    <defs>
+      <pattern id="rayas" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+        <rect width="12" height="12" fill="#ffffff"/>
+        <rect width="5" height="12" fill="#bfa475"/>
+      </pattern>
+      <radialGradient id="halo">
+        <stop offset="0%" stop-color="#ffd166" stop-opacity=".75"/>
+        <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <ellipse cx="150" cy="272" rx="135" ry="15" fill="#000000"/>
+    <ellipse cx="150" cy="268" rx="135" ry="13" fill="#fff"/>
+
+    <!-- Piso de abajo -->
+    <rect x="40" y="180" width="220" height="88" rx="14" fill="#1e4e5e"/>
+    <rect x="40" y="180" width="220" height="20" rx="10" fill="#fff"/>
+    <g fill="#fff">
+      <circle cx="52" cy="200" r="9"/><circle cx="74" cy="203" r="10"/><circle cx="96" cy="199" r="8"/>
+      <circle cx="118" cy="204" r="10"/><circle cx="140" cy="200" r="9"/><circle cx="162" cy="203" r="10"/>
+      <circle cx="184" cy="199" r="8"/><circle cx="206" cy="204" r="10"/><circle cx="228" cy="200" r="9"/>
+      <circle cx="248" cy="202" r="9"/>
+    </g>
+    <g>
+      <circle cx="70" cy="240" r="5" fill="#bfa475"/><circle cx="105" cy="228" r="5" fill="#fff"/>
+      <circle cx="140" cy="245" r="5" fill="#ffffff"/><circle cx="175" cy="230" r="5" fill="#bfa475"/>
+      <circle cx="210" cy="244" r="5" fill="#fff"/><circle cx="238" cy="228" r="5" fill="#ffffff"/>
+    </g>
+
+    <!-- Piso de arriba -->
+    <rect x="78" y="118" width="144" height="66" rx="12" fill="#4c5262"/>
+    <rect x="78" y="118" width="144" height="16" rx="8" fill="#fff"/>
+    <g fill="#fff">
+      <circle cx="88" cy="134" r="8"/><circle cx="107" cy="137" r="8"/><circle cx="126" cy="133" r="7"/>
+      <circle cx="145" cy="137" r="8"/><circle cx="164" cy="133" r="7"/><circle cx="183" cy="137" r="8"/>
+      <circle cx="202" cy="134" r="8"/><circle cx="214" cy="135" r="7"/>
+    </g>
+    <g>
+      <circle cx="100" cy="160" r="4" fill="#ffffff"/><circle cx="125" cy="168" r="4" fill="#1c2134"/>
+      <circle cx="150" cy="158" r="4" fill="#bfa475"/><circle cx="175" cy="168" r="4" fill="#1c2134"/>
+      <circle cx="200" cy="160" r="4" fill="#ffffff"/>
+    </g>
+
+    <!-- Velas -->
+    <g transform="translate(115,70)">
+      <rect x="-6" y="0" width="12" height="50" rx="3" fill="url(#rayas)"/>
+      <line class="mecha" x1="0" y1="0" x2="0" y2="-6" stroke="#3a2a2a" stroke-width="2"/>
+      <g class="fuego">
+        <circle cx="0" cy="-18" r="20" fill="url(#halo)"/>
+        <path d="M0 -32 C9 -18 9 -8 0 -5 C-9 -8 -9 -18 0 -32 Z" fill="#ff9f1c"/>
+        <path d="M0 -24 C5 -16 5 -9 0 -7 C-5 -9 -5 -16 0 -24 Z" fill="#fff3b0"/>
+      </g>
+    </g>
+    <g transform="translate(150,64)">
+      <rect x="-6" y="0" width="12" height="56" rx="3" fill="url(#rayas)"/>
+      <line class="mecha" x1="0" y1="0" x2="0" y2="-6" stroke="#3a2a2a" stroke-width="2"/>
+      <g class="fuego" style="animation-duration:.21s">
+        <circle cx="0" cy="-18" r="20" fill="url(#halo)"/>
+        <path d="M0 -32 C9 -18 9 -8 0 -5 C-9 -8 -9 -18 0 -32 Z" fill="#ff9f1c"/>
+        <path d="M0 -24 C5 -16 5 -9 0 -7 C-5 -9 -5 -16 0 -24 Z" fill="#fff3b0"/>
+      </g>
+    </g>
+    <g transform="translate(185,70)">
+      <rect x="-6" y="0" width="12" height="50" rx="3" fill="url(#rayas)"/>
+      <line class="mecha" x1="0" y1="0" x2="0" y2="-6" stroke="#3a2a2a" stroke-width="2"/>
+      <g class="fuego" style="animation-duration:.13s">
+        <circle cx="0" cy="-18" r="20" fill="url(#halo)"/>
+        <path d="M0 -32 C9 -18 9 -8 0 -5 C-9 -8 -9 -18 0 -32 Z" fill="#ff9f1c"/>
+        <path d="M0 -24 C5 -16 5 -9 0 -7 C-5 -9 -5 -16 0 -24 Z" fill="#fff3b0"/>
+      </g>
+    </g>
+  </svg>
+
+  <p class="pista">Toca el pastel para soplar las velas</p>
+  <button class="boton" data-ir="p2">Siguiente →</button>
+</section>
+
+<!-- ===== PANTALLA 2: fotos ===== -->
+<section class="pantalla" id="p2">
+  <h1>Nuestros recuerdos</h1>
+  <h2>Aun que no sean muchos porque me jalaron el fono</h2>
+  <div class="fotos" id="fotos"></div>
+  <button class="boton" data-ir="p4">Siguiente →</button>
+</section>
+
+<!-- ===== PANTALLA 4: sobre ===== -->
+<section class="pantalla" id="p4">
+  <div class="sobre">✉️</div>
+  <h2>Unas palabritas pero sin homosexualidad </h2>
+  <button class="boton" data-ir="p7">Ábrela</button>
+</section>
+
+<!-- ===== PANTALLA 7: la carta ===== -->
+<section class="pantalla" id="p7">
+  <h1 id="tituloCarta"></h1>
+  <div class="carta" id="carta"></div>
+  <button class="boton" id="otraVez">Celebrar otra vez</button>
+</section>
+
+<script src="script1.js"></script>
+</body>
+</html>

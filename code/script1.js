@@ -1,6 +1,6 @@
 // ================== CAMBIA AQUÍ TUS DATOS ==================
 const CONFIG = {
-  nombre: "",                // ej: "Carlos" (o usa el link con ?nombre=Carlos)
+  nombre: "Hector",              // ej: "Carlos" (o usa el link con ?nombre=Carlos)
   firma: "Ernesto",
 
   // Pon tus fotos en la carpeta "fotos" (ojo: usa "/" y revisa si son .jpg o .png)

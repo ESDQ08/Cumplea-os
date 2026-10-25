@@ -1,19 +1,19 @@
 // ================== CAMBIA AQUÍ TUS DATOS ==================
 const CONFIG = {
-  nombre: "Hector",              // ej: "Carlos" (o usa el link con ?nombre=Carlos)
+  nombre: "Diego",              // ej: "Carlos" (o usa el link con ?nombre=Carlos)
   firma: "Ernesto",
 
   // Pon tus fotos en la carpeta "fotos" (ojo: usa "/" y revisa si son .jpg o .png)
   // Para agregar más: "../fotos/foto1.jpg", "../fotos/foto2.jpg", ...
-  fotos: ["../fotos/foto1.webp"],
+  fotos: ["../fotos/grupo.jpg"],
 
   // Foto redonda de la primera pantalla
-  avatar: "../fotos/foto1.webp",
+  avatar: "../fotos/ron.jpg",
 
 
   // Cada texto entre comillas es un párrafo de la carta
   carta: [
-    "Pasala bien hermanito que disfrutes tu vagancia en Iquitos. ¡Gracias por ser tan buen amigo y por estar siempre ahí!"
+    "Pasala bien hermanito que disfrutes tu día especial. ¡Gracias por ser tan buen amigo y por estar siempre ahí!"
   ]
 };
 // ==========================================================
